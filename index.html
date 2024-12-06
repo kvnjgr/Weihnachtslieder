@@ -5,43 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weihnachtslieder</title>
     <style>
-        /* Grundlegendes Styling */
+        /* Grundlegende Einstellungen */
         * {
-            margin: 0; /* Alle Standardabstände entfernen */
-            padding: 0; /* Kein Padding */
-            box-sizing: border-box; /* Für präzises Größenmanagement */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Body-Stil */
         body {
             background-color: #001957; /* Hintergrundfarbe */
-            overflow: hidden; /* Keine vertikalen oder horizontalen Scrollleisten außerhalb des Containers */
+            overflow: hidden; /* Keine Scrollleisten außerhalb des Containers */
+            font-family: Arial, sans-serif;
         }
 
         /* Scroll-Container */
         .scroll-container {
-            height: 100vh;
+            height: 100vh; /* Höhe des Viewports */
             display: flex;
             flex-direction: column;
-            scroll-snap-type: y mandatory; /* Scroll-Snapping */
-            overflow-y: scroll;
+            scroll-snap-type: y mandatory; /* Vertikales Scroll-Snapping */
+            overflow-y: scroll; /* Scrollbare Seiten */
         }
 
-        /* Einzelne Seiten */
+        /* Jede Scroll-Seite */
         .page {
-            height: 100vh; /* Füllt den gesamten Bildschirm */
-            width: 100vw; /* Füllt die volle Breite */
-            scroll-snap-align: start; /* Snap bei Anfang der Seite */
+            height: 100vh; /* Füllt den gesamten Viewport */
+            width: 100vw; /* Füllt die gesamte Breite */
+            scroll-snap-align: start; /* Snapt an den Anfang */
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: #001957; /* Gleiche Hintergrundfarbe wie die Seite */
         }
 
         /* SVG-Styling */
         .page img {
-            width: 100vw; /* Immer die volle Breite */
-            height: 100vh; /* Immer die volle Höhe */
-            object-fit: cover; /* Keine weißen Ränder; schneidet ggf. Überflüssiges ab */
+            width: auto; /* Automatische Breite, damit das Seitenverhältnis erhalten bleibt */
+            height: 100%; /* SVG füllt die gesamte Höhe */
+            max-width: 100%; /* Passt sicher in die Breite */
         }
     </style>
 </head>
