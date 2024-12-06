@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weihnachtslieder</title>
     <style>
-        /* Allgemeine Seiteneinstellungen */
+        /* Grundlegendes Styling */
+        * {
+            margin: 0; /* Alle Standardabstände entfernen */
+            padding: 0; /* Kein Padding */
+            box-sizing: border-box; /* Für präzises Größenmanagement */
+        }
+
+        /* Body-Stil */
         body {
-            margin: 0;
-            padding: 0;
-            background-color: #001957;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
+            background-color: #001957; /* Hintergrundfarbe */
+            overflow: hidden; /* Keine vertikalen oder horizontalen Scrollleisten außerhalb des Containers */
         }
 
         /* Scroll-Container */
@@ -19,25 +23,25 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            scroll-snap-type: y mandatory;
+            scroll-snap-type: y mandatory; /* Scroll-Snapping */
             overflow-y: scroll;
-            margin: 0;
         }
 
-        /* Jede Scroll-Seite */
+        /* Einzelne Seiten */
         .page {
-            height: 100vh;
-            width: 100vw;
+            height: 100vh; /* Füllt den gesamten Bildschirm */
+            width: 100vw; /* Füllt die volle Breite */
+            scroll-snap-align: start; /* Snap bei Anfang der Seite */
             display: flex;
             justify-content: center;
             align-items: center;
-            scroll-snap-align: start;
         }
 
+        /* SVG-Styling */
         .page img {
-            width: 100%; /* SVGs immer volle Breite */
-            height: auto; /* Höhe proportional zur Breite */
-            max-height: 100vh; /* SVG passt sich der Bildschirmhöhe an */
+            width: 100vw; /* Immer die volle Breite */
+            height: 100vh; /* Immer die volle Höhe */
+            object-fit: cover; /* Keine weißen Ränder; schneidet ggf. Überflüssiges ab */
         }
     </style>
 </head>
