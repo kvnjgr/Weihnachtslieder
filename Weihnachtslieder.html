@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weihnachtslieder</title>
+    <style>
+        /* CSS für die Seite */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #001957;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Scroll-Container */
+        .scroll-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+        }
+
+        /* Jede PDF-Seite */
+        .page {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+        }
+
+        .page img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 5px solid white;
+            border-radius: 0px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="page">
+            <img src="seite1.svg" alt="Seite 1">
+        </div>
+        <div class="page">
+            <img src="seite2.svg" alt="Seite 2">
+        </div>
+        <div class="page">
+            <img src="seite3.svg" alt="Seite 3">
+        </div>
+        <div class="page">
+            <img src="seite4.svg" alt="Seite 4">
+        </div>
+    </div>
+</body>
+</html>
